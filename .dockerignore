@@ -1,0 +1,28 @@
+# Игнорируем Docker-специфичные файлы
+.dockerignore
+Dockerfile
+docker-compose.yml
+
+# Игнорируем виртуальное окружение
+.venv
+venv
+
+# Игнорируем кэш Python
+__pycache__
+*.pyc
+*.pyo
+
+# Игнорируем файлы IDE (PyCharm, VSCode)
+.idea
+.vscode
+
+# Игнорируем Git
+.git
+.gitignore
+
+# Игнорируем кэш Hugging Face / Transformers (ОЧЕНЬ ВАЖНО)
+.cache
+huggingface_cache
+
+# Другие системные файлы
+.env
