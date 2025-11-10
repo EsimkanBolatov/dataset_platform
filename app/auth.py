@@ -7,7 +7,7 @@ from passlib.context import CryptContext
 from datetime import datetime, timedelta, timezone
 from typing import Optional
 from sqlalchemy.orm import Session
-from . import crud, models
+from . import models
 from .database import SessionLocal
 from .database import get_db
 
@@ -44,6 +44,7 @@ def get_current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(
     """
     Проверяет токен и возвращает текущего пользователя.
     """
+    from . import crud
     credentials_exception = HTTPException(
         status_code=status.HTTP_401_UNAUTHORIZED,
         detail="Could not validate credentials",

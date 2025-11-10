@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 from datetime import timedelta
 
 # Важно правильно указать относительные импорты
-from .. import schemas, crud, auth, database
+from .. import schemas, crud, database
 from ..config import ACCESS_TOKEN_EXPIRE_MINUTES
 
 router = APIRouter()
@@ -20,6 +20,7 @@ def register_user(user: schemas.UserCreate, db: Session = Depends(database.get_d
 
 @router.post("/login", response_model=schemas.Token, tags=["Auth"])
 def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(database.get_db)):
+    from .. import auth
     user = crud.get_user_by_email(db, email=form_data.username)
     if not user or not auth.verify_password(form_data.password, user.password_hash):
         raise HTTPException(

@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="5157fa78-3ae0-4176-9ef1-6c0a6b64f762" name="Changes" comment="New commit config update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/crud.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/crud.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routers/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/auth.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,14 +66,14 @@
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Админ/PycharmProjects/dataset_platform&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -116,8 +118,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="FastAPI.dataset_platform" />
       <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+      <item itemvalue="FastAPI.dataset_platform" />
     </list>
     <recent_temporary>
       <list>
@@ -166,6 +168,15 @@
       <workItem from="1760797597760" duration="106000" />
       <workItem from="1761018877593" duration="3281000" />
       <workItem from="1761022223224" duration="960000" />
+      <workItem from="1761024429655" duration="7826000" />
+      <workItem from="1761487063099" duration="1086000" />
+      <workItem from="1761501259776" duration="2495000" />
+      <workItem from="1761640760251" duration="6167000" />
+      <workItem from="1761742083769" duration="4857000" />
+      <workItem from="1762416185725" duration="727000" />
+      <workItem from="1762417074862" duration="5379000" />
+      <workItem from="1762619752518" duration="2708000" />
+      <workItem from="1762622664837" duration="1166000" />
     </task>
     <task id="LOCAL-00001" summary="First commit (exp)">
       <option name="closed" value="true" />
