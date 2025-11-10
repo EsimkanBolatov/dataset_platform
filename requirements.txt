@@ -1,0 +1,12 @@
+fastapi[all]
+sqlalchemy
+psycopg2-binary
+passlib[bcrypt]
+python-jose[cryptography]
+groq
+python-multipart
+pandas
+openpyxl
+scikit-learn
+numpy
+python-dotenv
