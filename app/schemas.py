@@ -2,8 +2,9 @@
 
 import uuid
 from datetime import datetime
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, ConfigDict
 from typing import List, Dict, Any
+
 
 
 
@@ -12,13 +13,14 @@ from typing import List, Dict, Any
 class TemplateBase(BaseModel):
     name: str
     description: str | None = None
-    schema_: Dict[str, Any] # JSONB-поле для схемы. Используем alias, 'schema' - зарезервированное слово
+
+    schema_: Dict[str, Any] = Field(..., alias="schema")
+
     ui_hints: Dict[str, Any] | None = None
 
-    class Config:
-        # Pydantic будет использовать 'schema_' в коде,
-        # но в JSON запросах/ответах будет поле 'schema'
-        json_schema_extra = {
+    model_config = ConfigDict(
+        populate_by_name=True,
+        json_schema_extra={
             "example": {
                 "name": "Клиентская база",
                 "description": "Шаблон для ведения списка клиентов",
@@ -30,6 +32,7 @@ class TemplateBase(BaseModel):
                 }
             }
         }
+    )
 
 
 class TemplateCreate(TemplateBase):
