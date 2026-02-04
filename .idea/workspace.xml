@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5157fa78-3ae0-4176-9ef1-6c0a6b64f762" name="Changes" comment="New commit config update">
+    <list default="true" id="5157fa78-3ae0-4176-9ef1-6c0a6b64f762" name="Changes" comment="New commit schemas.py update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/test_hf_api.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,8 +115,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       <item itemvalue="FastAPI.dataset_platform" />
+      <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
     </list>
     <recent_temporary>
       <list>
@@ -178,7 +175,10 @@
       <workItem from="1762619752518" duration="2708000" />
       <workItem from="1762622664837" duration="1166000" />
       <workItem from="1762789728244" duration="69000" />
-      <workItem from="1763463295120" duration="3822000" />
+      <workItem from="1763463295120" duration="4622000" />
+      <workItem from="1763575397085" duration="66000" />
+      <workItem from="1763909054429" duration="17000" />
+      <workItem from="1763914093273" duration="10000" />
     </task>
     <task id="LOCAL-00001" summary="First commit (exp)">
       <option name="closed" value="true" />
@@ -260,7 +260,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761022772476</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="New commit schemas.py update">
+      <option name="closed" value="true" />
+      <created>1763469083281</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1763469083282</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,7 +290,8 @@
     <MESSAGE value="Second commit (exp)" />
     <MESSAGE value="New commit" />
     <MESSAGE value="New commit config update" />
-    <option name="LAST_COMMIT_MESSAGE" value="New commit config update" />
+    <MESSAGE value="New commit schemas.py update" />
+    <option name="LAST_COMMIT_MESSAGE" value="New commit schemas.py update" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/dataset_platform$dataset_platform.coverage" NAME="dataset_platform Coverage Results" MODIFIED="1758460178025" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
