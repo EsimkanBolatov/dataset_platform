@@ -1,16 +1,19 @@
-# database.py
+# app/database.py
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker, declarative_base # Обновленный импорт
+from sqlalchemy.orm import sessionmaker, declarative_base
 from .config import DATABASE_URL
 
-engine = create_engine(DATABASE_URL)
+# ИЗМЕНЕНИЕ: Добавляем аргументы, специфичные для SQLite
+connect_args = {}
+if "sqlite" in DATABASE_URL:
+    connect_args = {"check_same_thread": False}
+
+engine = create_engine(DATABASE_URL, connect_args=connect_args)
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 Base = declarative_base()
 
-# --- ВОТ ЭТА ФУНКЦИЯ ---
-# Dependency для получения сессии БД
 def get_db():
     db = SessionLocal()
     try:

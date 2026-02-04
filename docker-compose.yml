@@ -1,40 +1,15 @@
 services:
-  # Наш FastAPI бэкенд
   backend:
     build: .
     ports:
       - "8000:8000"
     environment:
-      # Эти переменные остаются без изменений
-      - DB_HOST=db
-      - DB_PORT=5432
-      - DB_USER=postgres
-      - DB_PASS=supersecret
-      - DB_NAME=dataset_db
+      # ИЗМЕНЕНИЕ: Указываем путь к файлу SQLite
+      - DATABASE_URL=sqlite:///./dataset_platform.db
       - GROQ_API_KEY=${GROQ_API_KEY}
-    depends_on:
-      db:
-        condition: service_healthy
-    # Блок healthcheck отсюда УБРАН
-
-  # База данных PostgreSQL
-  db:
-    image: postgres:15
+    # Удален depends_on, так как базы данных как отдельного сервиса больше нет
     volumes:
-      - postgres_data:/var/lib/postgresql/data/
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=supersecret
-      - POSTGRES_DB=dataset_db
-    ports:
-      - "5432:5432"
-    # --- БЛОК HEALTHCHECK ПЕРЕНЕСЁН И ИСПРАВЛЕН ЗДЕСЬ ---
-    healthcheck:
-      # Проверяем, готова ли база данных dataset_db принимать подключения от пользователя postgres
-      test: ["CMD-SHELL", "pg_isready -U postgres -d dataset_db"]
-      interval: 5s
-      timeout: 5s
-      retries: 5
+       # (Опционально) Чтобы база данных сохранялась при перезапуске контейнера
+       - ./dataset_platform.db:/app/dataset_platform.db
 
-volumes:
-  postgres_data:
+  # Сервис db (Postgres) полностью удален
